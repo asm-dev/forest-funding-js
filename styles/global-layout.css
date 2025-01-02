@@ -1,0 +1,31 @@
+@import "./variables/variables.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+@media (max-width: 1200px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.8rem;
+  }
+}

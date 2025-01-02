@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pino Quemado. Reforestación del Bosque Galego</title>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;600&display=swap"
+    />
+  </head>
+  <body>
+    <header id="main-header">
+      <nav id="top-nav">
+        <input type="checkbox" id="nav-toggle" />
+        <label for="nav-toggle" id="nav-toggle-label">☰</label>
+        <ul id="nav-list">
+          <li><a href="#mission">Inicio</a></li>
+          <li><a href="#about-us">El equipo</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#donation">Donar</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+      <div id="hero">
+        <h1>Recuperamos el verde de Galicia</h1>
+        <img
+          src="img/encabezado_bosque.jpg"
+          alt="Imagen de bosque en Galicia"
+        />
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="mission">
+        <h2>Nuestra misión</h2>
+        <p>
+          Gracias a donaciones colectivas conseguimos recuperar los bosques tras
+          los incendios. Cuando cuidamos los bosques, protegemos la
+          biodiversidad y el futuro de la <i>terriña galega</i>.
+        </p>
+        <p>
+          Después de los recientes incendios en la región, es primordial
+          restaurar los bosques dañados y promover un desarrollo sostenible.
+        </p>
+        <article id="mission-details">
+          <p>Conseguimos pasar de lo quemado</p>
+          <figure>
+            <img
+              src="img/incendio_bosque.jpg"
+              alt="Imagen de bosque tras un incendio"
+            />
+            <figcaption>Bosque incendiado.</figcaption>
+          </figure>
+          <p>A lo recuperado</p>
+          <figure>
+            <img
+              src="img/bosque_recuperado.jpg"
+              alt="Imagen de bosque reforestado en Galicia"
+            />
+            <figcaption>
+              Bosque reforestado en Galicia tras los incendios.
+            </figcaption>
+          </figure>
+          <span>#PinoQuemado #PinoRecuperado</span>
+        </article>
+      </section>
+
+      <section id="about-us">
+        <h2>Sobre Nosotros</h2>
+        <article>
+          <h3>¿Cómo empezó todo esto?</h3>
+          <p>
+            Año tras año veíamos como los bosques autóctonos de Galicia
+            disminuían a causa de desastres naturales. En concreto, cada verano
+            miles de hectáreas se queman.
+          </p>
+          <p>
+            Muchos de estos incendios son evitables mediante concenciación y
+            protección del espacio natural, pero ¿Qué hacemos cuando se incendia
+            el bosque?
+          </p>
+          <p>
+            Cuando un monte se quema, es fundamental recuperar el ecosistema con
+            especies locales en cuanto las condiciones lo permitan, y a veces
+            las administraciones tardan demasiado en actual. Para solucionar
+            este problema nació esta iniciativa
+          </p>
+          <p><b>Si el bosque se quema, nosotros lo recuperamos</b></p>
+        </article>
+        <article>
+          <h3>¿Quiénes somos?</h3>
+          <p>
+            Nuestro equipo cuenta con expertos en reforestación, voluntarios
+            locales y asociaciones comprometidas con el medio ambiente.
+          </p>
+          <img
+            src="img/equipo_reforestacion.jpg"
+            alt="La imagen muestra un grupo de hojas de varios colores"
+          />
+        </article>
+        <article>
+          <h3>¿Cómo nos financiamos?</h3>
+          <p>
+            Todas nuestras acciones dependen de las donaciones ciudadanas. Para
+            poder recuperar el verde del bosque gallego necesitamos tu ayuda.
+          </p>
+          <button href="#donation" class="cta-button">Quiero ayudar</button>
+        </article>
+      </section>
+
+      <section id="projects">
+        <h2>Acciones</h2>
+        <div class="cards">
+          <article>
+            <h3>Reforestación en As Fragas do Eume</h3>
+            <p>
+              Tras los incendios en esta zona protegida, estamos plantando
+              especies autóctonas como robles y castaños para recuperar su
+              biodiversidad.
+            </p>
+            <img
+              src="img/as_fragas_eume.jpg"
+              alt="Vista de As Fragas do Eume"
+            />
+            <a href="#" target="_blank">Más sobre este proyecto</a>
+          </article>
+          <article>
+            <h3>Educación Ambiental en Escuelas</h3>
+            <p>
+              Impartimos talleres en colegios gallegos para concienciar a los
+              jóvenes sobre la importancia de cuidar los bosques.
+            </p>
+            <img
+              src="img/educacion_ambiental.jpg"
+              alt="Taller en escuela sobre medio ambiente"
+            />
+            <a href="#" target="_blank">Ver más detalles</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="donation">
+        <h2>Arrima el hombro</h2>
+        <p>
+          Con tu ayuda podemos recuperar el olor a madera mojada, el verde de
+          pino y conseguir frenar la expansión del eucalipto en montes gallegos.
+          <span>¡Tu contribución es esencial!</span>
+        </p>
+        <form action="#" method="post">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="correo">Correo Electrónico:</label>
+          <input type="email" id="correo" name="correo" required />
+
+          <label for="monto">Donativo:</label>
+          <input type="number" id="monto" name="monto" min="1" required />
+
+          <button type="submit" class="cta-button">Donar</button>
+        </form>
+        <p>
+          Consulta
+          <a href="#" target="_blank"
+            >nuestra política de transparencia de fondos</a
+          >.
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2>Contacto</h2>
+        <address>
+          <p>
+            <b>Email</b>:
+            <a href="mailto:#">info@reforestaciongalicia.com</a>
+          </p>
+          <p><b>Teléfono</b>: +34 987 654 321</p>
+          <p>
+            <b>Dirección</b>: Rúa Los Grelos Son Verdes 45, Santiago de
+            Compostela, Galicia, España
+          </p>
+          <a
+            href="https://www.google.com/maps?q=+Santiago+de+Compostela"
+            target="_blank"
+            >Ver mapa</a
+          >
+        </address>
+      </section>
+    </main>
+
+    <footer id="main-footer">
+      <section id="social-media">
+        <h2>Echa un vistazo a nuestras redes</h2>
+        <ul>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li>
+            <a href="#" target="_blank">Blog</a>
+          </li>
+        </ul>
+      </section>
+      <p>&copy; 2024 Pino Quemado ORG. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,258 @@
+@import "./variables/variables.css";
+
+main img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-small);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+}
+
+#main-content {
+  section {
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    padding: var(--padding);
+
+    h2 {
+      padding: 0 0.5rem 2rem 0.5rem;
+      font-family: var(--heading-font);
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    h3 {
+      padding: 1rem 0.5rem;
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-family: var(--body-font);
+      font-weight: 400;
+      margin: 1rem 0;
+      padding: 0 0.5rem;
+    }
+
+    img {
+      width: 100%;
+      max-height: 60vh;
+      object-fit: cover;
+      overflow: hidden;
+      display: block;
+    }
+  }
+
+  #mission-details {
+    figure {
+      margin: 1rem 0;
+
+      img {
+        border-radius: var(--border-radius);
+      }
+
+      @media (max-width: 480px) {
+        img {
+          border-radius: 0px;
+        }
+      }
+
+      figcaption {
+        font-style: italic;
+        text-align: end;
+      }
+    }
+
+    p {
+      padding: 1.5rem 0;
+      margin: 3rem 0;
+      text-align: center;
+      border-bottom: 1px solid var(--terciary-color);
+      border-top: 1px solid var(--terciary-color);
+      font-size: 1.75rem;
+      font-weight: 400;
+      color: var(--terciary-color);
+    }
+
+    span {
+      font-size: 6rem;
+      font-weight: bolder;
+      padding: 5rem 0 2rem 0;
+      display: inline-block;
+      text-align: center;
+      background-size: cover;
+      background-image: url("/img/bosque_recuperado.jpg");
+      background-clip: text;
+      color: transparent;
+    }
+
+    @media (max-width: 480px) {
+      span {
+        font-size: 2rem;
+        padding: 2rem 0;
+      }
+    }
+  }
+
+  #about-us {
+    article {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    img {
+      margin: 2rem 0;
+      border-radius: var(--border-radius);
+    }
+
+    @media (max-width: 480px) {
+      img {
+        border-radius: 0px;
+      }
+    }
+
+    p b {
+      font-size: 1.5rem;
+      display: block;
+      padding: 3rem 8rem;
+      font-weight: bold;
+      color: var(--accent-color);
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+      word-spacing: 0.3rem;
+    }
+
+    @media (max-width: 480px) {
+      p b {
+        padding: 3rem 0;
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+
+    button {
+      margin-top: 3rem;
+      align-self: center;
+    }
+  }
+
+  #projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+
+    grid-template-areas:
+      "title"
+      "cards";
+
+    h2 {
+      grid-area: title;
+      text-align: left;
+      font-size: 2rem;
+    }
+
+    .cards {
+      grid-area: cards;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    article {
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 1.5rem;
+      height: 100%;
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        flex-grow: 1;
+      }
+
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: var(--border-radius);
+        margin-bottom: 1rem;
+      }
+
+      a {
+        display: inline-block;
+        font-size: 1rem;
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+        margin-top: auto;
+
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    #projects {
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem;
+
+      article {
+        padding: 0.5rem 1rem;
+      }
+
+      p {
+        margin-top: 0;
+      }
+
+      h2 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  #donation > p:last-of-type {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--text-color);
+  }
+
+  #contact address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 2rem 0 3rem;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    #contact address {
+      margin: 0 1rem;
+    }
+  }
+}
