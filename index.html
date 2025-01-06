@@ -26,7 +26,7 @@
       <div id="hero">
         <h1>Recuperamos el verde de Galicia</h1>
         <img
-          src="img/encabezado_bosque.jpg"
+          src="img/main/encabezado_bosque.jpg"
           alt="Imagen de bosque en Galicia"
         />
       </div>
@@ -48,7 +48,7 @@
           <p>Conseguimos pasar de lo quemado</p>
           <figure>
             <img
-              src="img/incendio_bosque.jpg"
+              src="img/main/incendio_bosque.jpg"
               alt="Imagen de bosque tras un incendio"
             />
             <figcaption>Bosque incendiado.</figcaption>
@@ -56,7 +56,7 @@
           <p>A lo recuperado</p>
           <figure>
             <img
-              src="img/bosque_recuperado.jpg"
+              src="img/main/bosque_recuperado.jpg"
               alt="Imagen de bosque reforestado en Galicia"
             />
             <figcaption>
@@ -96,8 +96,8 @@
             locales y asociaciones comprometidas con el medio ambiente.
           </p>
           <img
-            src="img/equipo_reforestacion.jpg"
-            alt="La imagen muestra un grupo de hojas de varios colores"
+            src="img/main/equipo_reforestacion.jpg"
+            alt="La imagen muestra varias hojas de diversos colores agrupadas"
           />
         </article>
         <article>
@@ -106,7 +106,7 @@
             Todas nuestras acciones dependen de las donaciones ciudadanas. Para
             poder recuperar el verde del bosque gallego necesitamos tu ayuda.
           </p>
-          <button href="#donation" class="cta-button">Quiero ayudar</button>
+          <a href="#donation" class="cta-button">Quiero ayudar</a>
         </article>
       </section>
 
@@ -121,7 +121,7 @@
               biodiversidad.
             </p>
             <img
-              src="img/as_fragas_eume.jpg"
+              src="img/actions/reforestation/as_fragas_eume.jpg"
               alt="Vista de As Fragas do Eume"
             />
             <a href="#" target="_blank">Más sobre este proyecto</a>
@@ -133,11 +133,74 @@
               jóvenes sobre la importancia de cuidar los bosques.
             </p>
             <img
-              src="img/educacion_ambiental.jpg"
+              src="img/actions/education/educacion_ambiental.jpg"
               alt="Taller en escuela sobre medio ambiente"
             />
             <a href="#" target="_blank">Ver más detalles</a>
           </article>
+        </div>
+      </section>
+
+      <section id="current-action">
+        <h2>Salvemos Crecente</h2>
+        <section id="image-carousel">
+          <div class="carousel-container">
+            <div id="carousel-images">
+              <img
+                src="img/actions/reforestation/crecente/crecente_alcalde.jpg"
+                alt="Dos operarios y varios políticos charlan en la zona del incendio"
+              />
+              <img
+                src="img/actions/reforestation/crecente/crecente_bomberos.jpg"
+                alt="Se observan varios bomberos con traje protector caminando en el monte con unas llamas al fondo"
+              />
+              <img
+                src="img/actions/reforestation/crecente/crecente_brasas_del_incendio.jpg"
+                alt="Imagen desoladora de un árbol abrasado, el fuego y mucho humo en el monte"
+              />
+              <img
+                src="img/actions/reforestation/crecente/crecente_helicoptero.jpg"
+                alt="La imagen enseña un helicóptero lanzando agua a una enorme columna de humo"
+              />
+              <img
+                src="img/actions/reforestation/crecente/crecente_incendio_de_noche.jpg"
+                alt="Entre la oscuridad de la noche en el monte se distinguen las figuras de dos bomberos por el contraste de las llamas en el monte"
+              />
+              <img
+                src="img/actions/reforestation/crecente/crecente_incendio_desde_el_aire.jpg"
+                alt="La imagen muestra Crescente con varios focos de incendio activo. Se ven tres columnas grandes de humo"
+              />
+              <img
+                src="img/actions/reforestation/crecente/crecente_mapa.jpg"
+                alt="Imagen satelital de la zona de Filgueira"
+              />
+              <img
+                src="img/actions/reforestation/crecente/crecente_vecino_pasea.jpg"
+                alt="Un vecino camina por una zona salvada pero cercana al incendio en el monte"
+              />
+            </div>
+            <button id="prev-btn">←</button>
+            <button id="next-btn">→</button>
+          </div>
+        </section>
+
+        <article id="countdown">
+          <p id="countdown-information"></p>
+          <p id="countdown-timer"></p>
+        </article>
+        <div id="progress-bar-container">
+          <p>Los primeros momentos tras el incendio son muy importantes.</p>
+          <p>
+            Necesitamos conseguir <span id="donation-achieved"></span>€ en los
+            próximos <span id="donation-timeframe-days"></span> días y
+            <span id="donation-timeframe-hours"></span> horas.
+          </p>
+          <p>
+            Con vuestra ayuda ya hemos conseguido el
+            <span id="donation-aim"></span>% de las donaciones necesarias para
+            salvar Crescente.
+          </p>
+          <progress id="donation-progress" max="100" value="0"></progress>
         </div>
       </section>
 
@@ -148,7 +211,7 @@
           pino y conseguir frenar la expansión del eucalipto en montes gallegos.
           <span>¡Tu contribución es esencial!</span>
         </p>
-        <form action="#" method="post">
+        <form id="donation-form" action="#" method="post">
           <label for="nombre">Nombre:</label>
           <input type="text" id="nombre" name="nombre" required />
 
