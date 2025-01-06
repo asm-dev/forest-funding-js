@@ -4,7 +4,7 @@ main img {
   max-width: 100%;
   height: auto;
   border-radius: var(--radius-small);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   margin: 1rem 0;
 }
 
@@ -12,10 +12,10 @@ main img {
   section {
     max-width: var(--max-width);
     margin: 2rem auto;
-    padding: var(--padding);
+    padding: 0 0.5rem;
 
     h2 {
-      padding: 0 0.5rem 2rem 0.5rem;
+      padding-bottom: 2rem;
       font-family: var(--heading-font);
       font-size: 2rem;
       font-weight: 600;
@@ -81,7 +81,7 @@ main img {
       display: inline-block;
       text-align: center;
       background-size: cover;
-      background-image: url("/img/bosque_recuperado.jpg");
+      background-image: url("/img/main/bosque_recuperado.jpg");
       background-clip: text;
       color: transparent;
     }
@@ -107,12 +107,6 @@ main img {
       border-radius: var(--border-radius);
     }
 
-    @media (max-width: 480px) {
-      img {
-        border-radius: 0px;
-      }
-    }
-
     p b {
       font-size: 1.5rem;
       display: block;
@@ -124,17 +118,21 @@ main img {
       word-spacing: 0.3rem;
     }
 
+    a {
+      align-self: center;
+      margin-top: 1.5rem;
+    }
+
     @media (max-width: 480px) {
+      img {
+        border-radius: 0px;
+      }
+
       p b {
         padding: 3rem 0;
         font-size: 1rem;
         text-align: center;
       }
-    }
-
-    button {
-      margin-top: 3rem;
-      align-self: center;
     }
   }
 
@@ -142,7 +140,6 @@ main img {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 2rem;
 
     grid-template-areas:
       "title"
@@ -157,7 +154,9 @@ main img {
     .cards {
       grid-area: cards;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      padding: 0 1rem;
+      margin-bottom: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: 2rem;
     }
 
@@ -166,15 +165,15 @@ main img {
       flex-direction: column;
       background-color: #fff;
       border-radius: var(--border-radius);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--box-shadow);
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      padding: 1.5rem;
+      padding: 1.25rem;
       height: 100%;
 
       &:hover {
         transform: translateY(-10px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        box-shadow: var(--box-shadow-long);
       }
 
       h3 {
@@ -253,6 +252,50 @@ main img {
   @media (max-width: 480px) {
     #contact address {
       margin: 0 1rem;
+    }
+  }
+
+  #current-action {
+    #image-carousel {
+      position: relative;
+    }
+
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    #carousel-images {
+      display: flex;
+      transition: transform 0.5s ease;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    #prev-btn {
+      left: 0;
+    }
+
+    #next-btn {
+      right: 0;
+    }
+
+    #progress-bar-container {
+      margin-top: 20px;
+    }
+
+    #donation-progress {
+      width: 100%;
+    }
+
+    #donation-progress-text {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
     }
   }
 }

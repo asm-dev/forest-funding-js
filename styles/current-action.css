@@ -1,0 +1,123 @@
+#current-action {
+  #image-carousel {
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+    #carousel-images {
+      display: flex;
+      column-gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      transition: transform 0.5s ease;
+      will-change: transform;
+
+      img {
+        max-width: 30%;
+        height: auto;
+        border-radius: 10px;
+      }
+    }
+
+    #prev-btn,
+    #next-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: var(--accent-color);
+      color: var(--background-color);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: var(--box-shadow-long);
+
+      /* These buttons are styled but hidden as this carousel gets functional only when JS is added */
+      display: none;
+    }
+
+    #prev-btn {
+      left: 10px;
+    }
+
+    #next-btn {
+      right: 10px;
+    }
+  }
+
+  #donation-progress-and-countdown {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    p {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      text-align: center;
+    }
+
+    p:last-of-type {
+      margin: 3.5rem 0 2rem 0;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    #donation-progress {
+      align-self: center;
+      margin: 0 0.5rem 3rem 0.5rem;
+      max-width: 50%;
+      height: 20px;
+      border: 1px solid var(--text-color);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      appearance: none;
+    }
+
+    #donation-progress::-webkit-progress-bar {
+      background-color: var(--secondary-color);
+      border-radius: var(--border-radius);
+    }
+
+    #donation-progress::-webkit-progress-value {
+      background-color: var(--terciary-color);
+      transition: width 0.3s ease;
+    }
+
+    #donation-progress::-moz-progress-bar {
+      background-color: var(--terciary-color);
+      border-radius: var(--border-radius);
+      transition: width 0.3s ease;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #current-action {
+    padding: 1rem;
+  }
+
+  #current-action h2 {
+    font-size: 2rem;
+  }
+
+  #prev-btn,
+  #next-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #donation-progress {
+    max-width: 30%;
+  }
+}

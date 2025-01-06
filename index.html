@@ -144,64 +144,62 @@
       <section id="current-action">
         <h2>Salvemos Crecente</h2>
         <section id="image-carousel">
-          <div class="carousel-container">
-            <div id="carousel-images">
-              <img
-                src="img/actions/reforestation/crecente/crecente_alcalde.jpg"
-                alt="Dos operarios y varios políticos charlan en la zona del incendio"
-              />
-              <img
-                src="img/actions/reforestation/crecente/crecente_bomberos.jpg"
-                alt="Se observan varios bomberos con traje protector caminando en el monte con unas llamas al fondo"
-              />
-              <img
-                src="img/actions/reforestation/crecente/crecente_brasas_del_incendio.jpg"
-                alt="Imagen desoladora de un árbol abrasado, el fuego y mucho humo en el monte"
-              />
-              <img
-                src="img/actions/reforestation/crecente/crecente_helicoptero.jpg"
-                alt="La imagen enseña un helicóptero lanzando agua a una enorme columna de humo"
-              />
-              <img
-                src="img/actions/reforestation/crecente/crecente_incendio_de_noche.jpg"
-                alt="Entre la oscuridad de la noche en el monte se distinguen las figuras de dos bomberos por el contraste de las llamas en el monte"
-              />
-              <img
-                src="img/actions/reforestation/crecente/crecente_incendio_desde_el_aire.jpg"
-                alt="La imagen muestra Crescente con varios focos de incendio activo. Se ven tres columnas grandes de humo"
-              />
-              <img
-                src="img/actions/reforestation/crecente/crecente_mapa.jpg"
-                alt="Imagen satelital de la zona de Filgueira"
-              />
-              <img
-                src="img/actions/reforestation/crecente/crecente_vecino_pasea.jpg"
-                alt="Un vecino camina por una zona salvada pero cercana al incendio en el monte"
-              />
-            </div>
-            <button id="prev-btn">←</button>
-            <button id="next-btn">→</button>
+          <div id="carousel-images">
+            <img
+              src="img/actions/reforestation/crecente/crecente_alcalde.jpg"
+              alt="Dos operarios y varios políticos charlan en la zona del incendio"
+            />
+            <img
+              src="img/actions/reforestation/crecente/crecente_bomberos.jpg"
+              alt="Se observan varios bomberos con traje protector caminando en el monte con unas llamas al fondo"
+            />
+            <img
+              src="img/actions/reforestation/crecente/crecente_brasas_del_incendio.jpg"
+              alt="Imagen desoladora de un árbol abrasado, el fuego y mucho humo en el monte"
+            />
+            <img
+              src="img/actions/reforestation/crecente/crecente_helicoptero.jpg"
+              alt="La imagen enseña un helicóptero lanzando agua a una enorme columna de humo"
+            />
+            <img
+              src="img/actions/reforestation/crecente/crecente_incendio_de_noche.jpg"
+              alt="Entre la oscuridad de la noche en el monte se distinguen las figuras de dos bomberos por el contraste de las llamas en el monte"
+            />
+            <img
+              src="img/actions/reforestation/crecente/crecente_incendio_desde_el_aire.jpg"
+              alt="La imagen muestra Crescente con varios focos de incendio activo. Se ven tres columnas grandes de humo"
+            />
+            <img
+              src="img/actions/reforestation/crecente/crecente_mapa.jpg"
+              alt="Imagen satelital de la zona de Filgueira"
+            />
+            <img
+              src="img/actions/reforestation/crecente/crecente_vecino_pasea.jpg"
+              alt="Un vecino camina por una zona salvada pero cercana al incendio en el monte"
+            />
           </div>
+          <button id="prev-btn">←</button>
+          <button id="next-btn">→</button>
         </section>
 
-        <article id="countdown">
-          <p id="countdown-information"></p>
-          <p id="countdown-timer"></p>
-        </article>
-        <div id="progress-bar-container">
-          <p>Los primeros momentos tras el incendio son muy importantes.</p>
+        <article id="donation-progress-and-countdown">
           <p>
-            Necesitamos conseguir <span id="donation-achieved"></span>€ en los
-            próximos <span id="donation-timeframe-days"></span> días y
-            <span id="donation-timeframe-hours"></span> horas.
+            Los primeros momentos tras el incendio son muy importantes. Nuestro
+            objetivo es salvar 458 hectáreas de bosque en Crescente.
+          </p>
+          <p class="countdown">
+            Necesitamos conseguir <span id="donation-aim">[OBJETIVO]</span>€ en
+            los próximos <span id="countdown-days">[NUM DIAS]</span> días,
+            <span id="countdown-hours">[NUM HORAS]</span> horas y
+            <span id="countdown-minutes">[NUM MINUTORS]</span> minutos.
           </p>
           <p>
             Con vuestra ayuda ya hemos conseguido el
-            <span id="donation-aim"></span>% de las donaciones necesarias para
-            salvar Crescente.
+            <span id="donation-achieved">[PORCENTAJE CONSEGUIDO]</span>% de las
+            donaciones necesarias para salvar Crescente.
           </p>
           <progress id="donation-progress" max="100" value="0"></progress>
-        </div>
+        </article>
       </section>
 
       <section id="donation">

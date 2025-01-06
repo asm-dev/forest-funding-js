@@ -6,8 +6,7 @@
   z-index: 10;
   background-color: var(--secondary-color);
   padding: 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
+  box-shadow: var(--box-shadow);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,11 +50,11 @@
     flex-direction: column;
     background-color: var(--secondary-color);
     position: absolute;
-    top: 100%; /* Debajo del nav */
+    top: 100%;
     left: 0;
     width: 100%;
     padding: 1rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
 
     li {
       font-size: 1rem;

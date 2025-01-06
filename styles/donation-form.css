@@ -18,7 +18,7 @@
       margin: 3rem 0 4rem 0;
       font-size: 4rem;
       background-size: contain;
-      background-image: url("/img/equipo_reforestacion.jpg");
+      background-image: url("/img/main/equipo_reforestacion.jpg");
       background-clip: text;
       background-position: center;
       color: transparent;
@@ -38,7 +38,7 @@
     padding: 2rem 1.5rem;
     background: var(--secondary-color);
     border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow-light);
+    box-shadow: var(--box-shadow);
     border: 1px solid var(--light-grey);
     display: flex;
     flex-direction: column;
@@ -49,27 +49,27 @@
       font-size: 1rem;
       font-weight: 600;
       color: var(--text-color);
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.1rem;
     }
 
     input[type="text"],
     input[type="email"],
     input[type="number"] {
       width: 100%;
-      padding: 0.8rem;
+      padding: 0.6rem;
       font-family: var(--body-font);
       font-size: 1rem;
       color: var(--text-color);
       background-color: var(--secondary-background-color);
       border: 1px solid var(--light-grey);
       border-radius: var(--border-radius);
-      box-shadow: inset var(--box-shadow-light);
+      box-shadow: inset var(--box-shadow);
       transition: all 0.3s ease;
 
       &:focus {
         outline: none;
         border-color: var(--accent-color);
-        box-shadow: 0 0 6px rgba(212, 135, 0, 0.5);
+        box-shadow: var(--box-shadow-accent);
       }
 
       &::placeholder {
@@ -85,6 +85,12 @@
 
     button {
       margin-top: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #donation-form {
+      max-width: 80vh;
     }
   }
 
