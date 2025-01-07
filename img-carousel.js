@@ -4,50 +4,31 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextButton = document.querySelector("#next-btn");
   const images = document.querySelectorAll("#carousel-images img");
 
-  const imagesToShow = 3;
-  const imageWidth = 100 / imagesToShow;
-  let currentIndex = 0;
+  const imgsOnDisplay = images.length;
+  const imgsToShow = 3;
+  const widthConfig = 100 / imgsToShow;
 
-  images.forEach((img) => (img.style.flex = `0 0 ${imageWidth}%`));
+  let imgIndex = 0;
+  images.forEach((img) => (img.style.flex = `0 0 ${widthConfig}%`));
 
   const updateCarousel = () => {
-    const totalImages = images.length;
-
-    if (currentIndex < 0) {
-      currentIndex = totalImages - imagesToShow;
+    if (imgIndex < 0) {
+      imgIndex = imgsOnDisplay - imgsToShow;
     }
-    if (currentIndex > totalImages - imagesToShow) {
-      currentIndex = 0;
+    if (imgIndex > imgsOnDisplay - imgsToShow) {
+      imgIndex = 0;
     }
-    const offset = currentIndex * -imageWidth;
+    const offset = imgIndex * -widthConfig;
     container.style.transform = `translateX(${offset}%)`;
   };
 
   prevButton.addEventListener("click", () => {
-    currentIndex -= 1;
+    --imgIndex;
     updateCarousel();
   });
 
   nextButton.addEventListener("click", () => {
-    currentIndex += 1;
+    ++imgIndex;
     updateCarousel();
-  });
-
-  // Esperar a que todas las imágenes estén cargadas antes de inicializar
-  let loadedImagesCount = 0;
-  images.forEach((img) => {
-    img.addEventListener("load", () => {
-      loadedImagesCount++;
-      if (loadedImagesCount === images.length) {
-        updateCarousel(); // Inicializar carrusel una vez cargadas las imágenes
-      }
-    });
-  });
-
-  // Manejar casos en los que las imágenes ya estén en caché
-  images.forEach((img) => {
-    if (img.complete) {
-      img.dispatchEvent(new Event("load"));
-    }
   });
 });
