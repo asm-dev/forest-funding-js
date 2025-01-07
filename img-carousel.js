@@ -4,31 +4,43 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextButton = document.querySelector("#next-btn");
   const images = document.querySelectorAll("#carousel-images img");
 
-  const imgsOnDisplay = images.length;
-  const imgsToShow = 3;
-  const widthConfig = 100 / imgsToShow;
+  const imagesAvailable = images.length;
+  let imageWidth;
+  let imagesToShow = 0;
+  let currentIndex = 0;
 
-  let imgIndex = 0;
-  images.forEach((img) => (img.style.flex = `0 0 ${widthConfig}%`));
+  const initCarousel = () => {
+    imagesToShow = window.innerWidth < 768 ? 1 : 3;
+    imageWidth = 100 / imagesToShow;
+
+    images.forEach((img) => (img.style.flex = `0 0 ${imageWidth}%`));
+
+    currentIndex = Math.min(currentIndex, imagesAvailable - imagesToShow);
+    updateCarousel();
+  };
 
   const updateCarousel = () => {
-    if (imgIndex < 0) {
-      imgIndex = imgsOnDisplay - imgsToShow;
+    if (currentIndex < 0) {
+      currentIndex = imagesAvailable - imagesToShow;
     }
-    if (imgIndex > imgsOnDisplay - imgsToShow) {
-      imgIndex = 0;
+    if (currentIndex > imagesAvailable - imagesToShow) {
+      currentIndex = 0;
     }
-    const offset = imgIndex * -widthConfig;
+
+    const offset = currentIndex * -imageWidth;
     container.style.transform = `translateX(${offset}%)`;
   };
 
   prevButton.addEventListener("click", () => {
-    --imgIndex;
+    currentIndex--;
     updateCarousel();
   });
 
   nextButton.addEventListener("click", () => {
-    ++imgIndex;
+    currentIndex++;
     updateCarousel();
   });
+
+  window.addEventListener("resize", initCarousel);
+  initCarousel();
 });

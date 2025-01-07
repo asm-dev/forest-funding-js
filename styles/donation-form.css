@@ -23,17 +23,10 @@
       background-position: center;
       color: transparent;
     }
-
-    @media (max-width: 480px) {
-      span {
-        font-size: 2rem;
-        background-size: cover;
-      }
-    }
   }
 
   #donation-form {
-    max-width: 45vw;
+    max-width: 60vw;
     margin: 2rem auto;
     padding: 2rem 1.5rem;
     background: var(--secondary-color);
@@ -88,22 +81,6 @@
     }
   }
 
-  @media (max-width: 768px) {
-    #donation-form {
-      max-width: 80vh;
-    }
-  }
-
-  @media (max-width: 480px) {
-    #donation-form {
-      max-width: none;
-      margin: 0.5rem;
-      padding: 0.5rem;
-      align-self: center;
-      gap: 1rem;
-    }
-  }
-
   a {
     color: var(--accent-color);
     text-decoration: none;
@@ -113,6 +90,53 @@
     &:hover {
       color: var(--primary-color);
       text-decoration: underline;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  #donation {
+    #donation-form {
+      width: 60%;
+      max-width: 1200px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #donation {
+    #donation-form {
+      width: 60%;
+      max-width: 50vw;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  #donation {
+    p {
+      span {
+        font-size: 2rem;
+        background-size: cover;
+      }
+    }
+
+    #donation-form {
+      width: 75%;
+      max-width: none;
+      margin: 0.5rem;
+      padding: 0.5rem;
+      align-self: center;
+      gap: 1rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #donation {
+    #donation-form {
+      width: 75%;
+      max-width: none;
     }
   }
 }

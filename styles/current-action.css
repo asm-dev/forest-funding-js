@@ -1,6 +1,7 @@
 #current-action {
   #image-carousel {
-    margin: 2rem 0.5rem 2rem 0.5rem;
+    position: relative;
+    margin: 2rem 0.5rem 3rem 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,11 +43,11 @@
     }
 
     #prev-btn {
-      left: 10px;
+      left: 0;
     }
 
     #next-btn {
-      right: 10px;
+      right: 0px;
     }
   }
 
@@ -64,13 +65,12 @@
     p:last-of-type {
       margin: 3.5rem 0 2rem 0;
       font-weight: bold;
-      text-align: center;
     }
 
     #donation-progress {
       align-self: center;
       margin: 0 0.5rem 3rem 0.5rem;
-      max-width: 50%;
+      width: 40vw;
       height: 20px;
       border: 1px solid var(--text-color);
       border-radius: var(--border-radius);
@@ -99,6 +99,20 @@
 @media (max-width: 768px) {
   #current-action {
     padding: 1rem;
+
+    #donation-progress-and-countdown {
+      p {
+        text-align: left;
+      }
+
+      p:last-of-type {
+        text-align: center;
+      }
+
+      #donation-progress {
+        width: 90vw;
+      }
+    }
   }
 
   #current-action h2 {
@@ -111,10 +125,18 @@
     height: 30px;
     font-size: 1rem;
   }
+
+  #donation-progress {
+    width: 90vw;
+  }
 }
 
-@media (min-width: 768px) {
-  #donation-progress {
-    max-width: 30%;
+@media (min-width: 1600px) {
+  #current-action {
+    #donation-progress-and-countdown {
+      #donation-progress {
+        width: 45%;
+      }
+    }
   }
 }
