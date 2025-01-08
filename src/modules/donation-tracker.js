@@ -13,7 +13,8 @@ export const initDonationTracker = () => {
   const directDonationButton = createButton(
     "donate-button",
     "Enviar ayuda directa",
-    COLORS.ACCENT
+    COLORS.ACCENT,
+    { marginTop: "0" }
   );
 
   const currentActionSection = document.getElementById("current-action");
