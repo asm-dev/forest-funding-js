@@ -3,17 +3,20 @@ export const initDonationForm = () => {
 
   const submitDonation = async (formData) => {
     try {
-      const response = await fetch("https://example.com/donation", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.get("nombre"),
-          email: formData.get("correo"),
-          donation: formData.get("monto"),
-        }),
-      });
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/posts",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.get("nombre"),
+            email: formData.get("correo"),
+            donation: formData.get("monto"),
+          }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error(
