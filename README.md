@@ -20,48 +20,20 @@ El proyecto sigue una **arquitectura modular**, lo que significa que cada funcio
 
 ### Funcionalidades
 
-|           Funcionalidad           |                                                      Objetivo                                                       |                         Fichero relacionado                          | Ejemplo de uso | Visualización |
-| :-------------------------------: | :-----------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------: | :------------: | :-----------: |
-| Gestión de eventos en formularios |                                                         obj                                                         |                                 arch                                 |      ejem      |      vis      |
-|  Barra de progreso de donaciones  | Incentivar las donaciones al permitir al usuario conocer en tiempo real el total recaudado para una acción concreta | [`src/modules/donation-tracker.js`](src/modules/donation-tracker.js) |      ejem      |      vis      |
-|                obj                |                                                        arch                                                         |                                 ejem                                 |      vis       |
-|                obj                |                                                        arch                                                         |                                 ejem                                 |      vis       |
+Para probar las siguientes funcionalidades que se detallan en la tabla puedes navegar metiante el menú principal, haciendo _scroll_ o desde el botón flotante "Salva el bosque de Crescente" hasta la sección "Salvemos Crecente".
 
----
+|           Funcionalidad           |                                   Objetivo principal                                   |                         Fichero relacionado                          |
+| :-------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------: |
+| Gestión de eventos en formularios |                                        objetivo                                        |                     pendiente de implementación                      |
+|  Barra de progreso de donaciones  | Permitir al usuario conocer en tiempo real el total recaudado para una acción concreta | [`src/modules/donation-tracker.js`](src/modules/donation-tracker.js) |
+|       Carrusel de imágenes        |                  Aumentar la interactividad y dinamismo de la página                   |         [`src/modules/carousel.js`](src/modules/carousel.js)         |
+|         Cuenta regresiva          | Generar sensación de urgencia, posibilitando con ello un incremento en el total donado |        [`src/modules/countdown.js`](src/modules/countdown.js)        |
 
-### Barra de progreso de donaciones
+### Ejemplos de uso
 
-> _Archivo relacionado_:
-
-Permite a los usuarios conocer el estado de cumplimiento del objetivo de recaudación para una acción concreta. Ver el progreso acumulado debería incentivar las donaciones.
-
-- **Características**:
-  - Un botón flotante anima al usuario a participar.
-  - Al realizar un donativo, la barra de progreso se actualiza dinámicamente y muestra el porcentaje alcanzado.
-  - Implementa validación básica para evitar entradas no válidas.
-
----
-
-### Carrusel de imágenes
-
-> _Módulo relacionado_: [`src/modules/carousel.js`](src/modules/carousel.js)
-
-El carrusel muestra imágenes relevantes del proyecto y es adaptable a diferentes tamaños de pantalla.
-
-- **Características**:
-  - Soporte para navegación hacia adelante y atrás mediante botones.
-  - Diseño responsive: ajusta el número de imágenes visibles según el tamaño de la ventana.
-  - Optimización dinámica del ancho de las imágenes para una transición fluida.
-
----
-
-### Cuenta regresiva
-
-> _Fichero relacionado_: [`src/modules/countdown.js`](src/modules/countdown.js)
-
-Muestra un temporizador en tiempo real que indica cuánto tiempo queda para completar la recaudación.
-
-- **Características**:
-  - Actualización automática cada minuto para mostrar los días, horas y minutos restantes.
-  - Integra información de donaciones, como el objetivo total y el progreso logrado.
-  - Gestión de eventos para detener el temporizador cuando se alcance el objetivo.
+|                     Acción                     | Visualización |
+| :--------------------------------------------: | :-----------: |
+| _Actualización automática del tiempo restante_ |      c1       |
+|        _Cambio en la barra de progreso_        |      c2       |
+|            _Envío de ayuda directa_            |      c3       |
+|            _Se alcanza el objetivo_            |      c4       |
