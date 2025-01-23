@@ -9,9 +9,8 @@ export const initCarousel = () => {
   let currentIndex = 0;
 
   const updateCarousel = () => {
-    const offset = currentIndex * -imageWidth;
+    const offset = (currentIndex * -100) / imagesToShow;
     container.style.transform = `translateX(${offset}%)`;
-    console.log("updato container con ofset -->", offset);
   };
 
   const handleResize = () => {
@@ -22,15 +21,22 @@ export const initCarousel = () => {
     updateCarousel();
   };
 
-  prevButton.addEventListener("click", () => {
-    console.log("paso por aqui");
-    currentIndex = Math.max(currentIndex - 1, 0);
+  nextButton.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+
+    if (currentIndex > images.length - imagesToShow) {
+      currentIndex = 0;
+    }
     updateCarousel();
   });
 
-  nextButton.addEventListener("click", () => {
-    console.log("paso por el otro");
-    currentIndex = Math.min(currentIndex + 1, images.length - imagesToShow);
+  prevButton.addEventListener("click", () => {
+    if (currentIndex === 0) {
+      currentIndex = images.length - imagesToShow;
+    } else {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+    }
+
     updateCarousel();
   });
 
