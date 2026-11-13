@@ -1,27 +1,27 @@
-# Reforestación en Galicia - Interactividad con JS
+# Reforestation in Galicia - Interactivity with JS
 
-Pino Quemado es una iniciativa de micromecenazgo desarrollada como parte de una actividad sobre programación asíncrona del Máster de Desarrollo Web y Aplicaciones de la Universidad Europea de Madrid (UEM). El objetivo del proyecto es recaudar fondos para la recuperación de los bosques de Galicia tras los incendios, utilizando un modelo de donaciones altruistas.
+Pino Quemado ("Burnt Pine") is a crowdfunding initiative developed as part of an asynchronous programming activity of the Master's in Web Development and Applications at the Universidad Europea de Madrid (UEM). The goal of the project is to raise funds for the recovery of Galicia's forests after the fires, using an altruistic donation model.
 
-> En este proyecto sólo encontrarás datos ficticios. Se trata de una prueba de concepto o proyecto de fines educativos por lo que no realiza ningún tratamiento de datos reales.
+> In this project you will only find fictitious data. It is a proof of concept or educational project, so it does not process any real data.
 
 
-
-&nbsp;
-
-## Detalles técnicos
-
-Si te gustaría conocer más sobre la estructura HTML o el diseño CSS del sitio, te invito a saber más en estos repositorios: [HTML](https://github.com/asm-dev/forest-funding-html) y [CSS](https://github.com/asm-dev/forest-funding-css). 
-
-En cuanto a lo que JavaScript refiere, he decidido seguir una **arquitectura modular** para la aplicación. Este enfoque garantiza una clara separación de responsabilidades, lo que mejora la claridad, mantenibilidad, escabilidad y reutilización del código.
-
-Para probar las principales **funcionalidades** implementadas puedes navegar mediante el menú principal, haciendo _scroll_ o desde el botón flotante "Salva el bosque de Crescente" hasta la sección "Salvemos Crecente".
 
 &nbsp;
 
-|           Funcionalidad           |                                   Descripción                                   |                         Fichero relacionado                          | Visualización |
+## Technical details
+
+If you would like to learn more about the HTML structure or the CSS design of the site, I invite you to find out more in these repositories: [HTML](https://github.com/asm-dev/forest-funding-html) and [CSS](https://github.com/asm-dev/forest-funding-css). 
+
+As far as JavaScript is concerned, I decided to follow a **modular architecture** for the application. This approach ensures a clear separation of responsibilities, which improves the clarity, maintainability, scalability and reusability of the code.
+
+To try the main **features** implemented, you can navigate through the main menu, by _scrolling_, or from the floating button "Save the Crescente forest" to the "Let's Save Crecente" section.
+
+&nbsp;
+
+|              Feature              |                                   Description                                   |                         Related file                          | Preview |
 | :-------------------------------: | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------: | :------------: |
-| Gestión de eventos en formularios | Envío de datos del formulario a una base de datos o backend. Usamos JSONPlaceholder para simular una API real  |                     [`src/modules/donation-form.js`](src/modules/donation-form.js)                    | Éxito ![image](https://github.com/user-attachments/assets/fb4b59da-c100-48d1-862f-6725e01e7a9e) Error ![image](https://github.com/user-attachments/assets/d9d3c1d4-5da5-4684-bbd8-af6929e11e1f)|
-|  Barra de progreso de donaciones  | Permite al usuario conocer en tiempo real el total recaudado para una acción concreta | [`src/modules/donation-tracker.js`](src/modules/donation-tracker.js) | Donamos cierta cuantía ![image](https://github.com/user-attachments/assets/1d8a133a-fe9d-4514-a984-84b1ddd8349b) Al alcanzar el objetivo ![image](https://github.com/user-attachments/assets/881774bc-bf0a-411a-9685-441f8077324d) |
-|       Carrusel de imágenes        |                  Aumenta la interactividad y el dinamismo de la página                   |         [`src/modules/carousel.js`](src/modules/carousel.js) | Pantallas medianas y grandes ![image](https://github.com/user-attachments/assets/6e4bf34c-a8e1-42f3-ad39-80ce9b70b918) Dispositivos móviles ![image](https://github.com/user-attachments/assets/245fa6bc-931a-4763-8f78-30829d812677) |
-|         Cuenta regresiva          | Detalla cuantos días horas y minutos quedan hasta el fin de la acción |        [`src/modules/countdown.js`](src/modules/countdown.js)        | 16:49 del 23/01/2024 ![image](https://github.com/user-attachments/assets/d2a04bb4-56bf-4000-8698-0a5b80051986)  Un minuto después ![image](https://github.com/user-attachments/assets/4df14a04-6057-4176-af25-b7d4d9210b6b) |
-| (_Bonus track_) Envío rápido de ayuda directa | Donar directamente a la acción en un solo click | [`src/modules/donation-tracker.js`](src/modules/donation-tracker.js) | Caso de éxito en la validación ![image](https://github.com/user-attachments/assets/6e0b5bec-fd0f-4ef9-8cab-275e5521c459) ![image](https://github.com/user-attachments/assets/c5ea9ceb-7bbc-4492-abe2-66f10dcdcd8c) Contenido inválido ![image](https://github.com/user-attachments/assets/53ce54a2-97cd-462b-aaa2-386eb436add9) ![image](https://github.com/user-attachments/assets/522ca725-0b15-4a50-a66f-26874e2e970c) |
+| Form event handling | Sending form data to a database or backend. We use JSONPlaceholder to simulate a real API  |                     [`src/modules/donation-form.js`](src/modules/donation-form.js)                    | Success ![image](https://github.com/user-attachments/assets/fb4b59da-c100-48d1-862f-6725e01e7a9e) Error ![image](https://github.com/user-attachments/assets/d9d3c1d4-5da5-4684-bbd8-af6929e11e1f)|
+|  Donation progress bar  | Lets the user know in real time the total raised for a specific action | [`src/modules/donation-tracker.js`](src/modules/donation-tracker.js) | We donate a certain amount ![image](https://github.com/user-attachments/assets/1d8a133a-fe9d-4514-a984-84b1ddd8349b) When the goal is reached ![image](https://github.com/user-attachments/assets/881774bc-bf0a-411a-9685-441f8077324d) |
+|       Image carousel        |                  Increases the interactivity and dynamism of the page                   |         [`src/modules/carousel.js`](src/modules/carousel.js) | Medium and large screens ![image](https://github.com/user-attachments/assets/6e4bf34c-a8e1-42f3-ad39-80ce9b70b918) Mobile devices ![image](https://github.com/user-attachments/assets/245fa6bc-931a-4763-8f78-30829d812677) |
+|         Countdown          | Details how many days, hours and minutes are left until the end of the action |        [`src/modules/countdown.js`](src/modules/countdown.js)        | 16:49 on 23/01/2024 ![image](https://github.com/user-attachments/assets/d2a04bb4-56bf-4000-8698-0a5b80051986)  One minute later ![image](https://github.com/user-attachments/assets/4df14a04-6057-4176-af25-b7d4d9210b6b) |
+| (_Bonus track_) Quick direct aid submission | Donate directly to the action in a single click | [`src/modules/donation-tracker.js`](src/modules/donation-tracker.js) | Successful validation case ![image](https://github.com/user-attachments/assets/6e0b5bec-fd0f-4ef9-8cab-275e5521c459) ![image](https://github.com/user-attachments/assets/c5ea9ceb-7bbc-4492-abe2-66f10dcdcd8c) Invalid content ![image](https://github.com/user-attachments/assets/53ce54a2-97cd-462b-aaa2-386eb436add9) ![image](https://github.com/user-attachments/assets/522ca725-0b15-4a50-a66f-26874e2e970c) |
